@@ -31,12 +31,3 @@
 2. **Impacto da Ponderação Contínua e K-Means++ (Experimento 2):** Na base *Breast Cancer*, substituir a inicialização aleatória única por `K-Means++` e aplicar o peso contínuo na fronteira (`continuous`) fez o $\text{ARI}$ do detector *Leiden* saltar de $0.3296$ para $0.6447$, confirmando a hipótese de que a contagem discreta simples na fronteira sofre com ruído.
 3. **Acerto exato de $k$ pelo Spectral Clustering:** O *Spectral Clustering* combinado à heurística do *eigengap* foi o único método capaz de descobrir o número exato de classes ($m=2$, erro zero) na base *Breast Cancer*.
 
----
-
-### 3. Guia Rápido de Fala para a Reunião (3 Tópicos)
-* **O que eu fiz:** *"Estruturei a proposta formal, configurei o repositório no GitHub e já implementei o protótipo completo do VillageNet modular em Python, permitindo trocar o gerador de vilas (Etapa 1), o cálculo de peso da fronteira (Etapa 3) e o detector de comunidades (Etapa 4)."*
-* **O que eu descobri:** *"Rodei os primeiros testes em 3 bases públicas do artigo original (Wine, Breast Cancer e Pen Digits). O destaque principal foi o Infomap na Etapa 4 e a ponderação contínua com K-Means++ nas Etapas 1 e 3, que já bateram os valores de NMI e ARI reportados pelos autores do VillageNet no paper original."*
-* **Quais são os próximos passos (Semana 2):**
-  1. Integrar o detector WLCF original do repositório dos autores como *baseline* direto dentro do mesmo código.
-  2. Testar a combinação campeã (`K-Means++ + Contínuo + Infomap`) variando múltiplas sementes aleatórias (`random_state`) para medir a estabilidade (média e desvio-padrão).
-  3. Expandir os testes para bases maiores do artigo (*UCI-HAR* e *Gas Sensor*) e preparar a interface de entrada para receber a matriz pré-processada da base clínica de IAM de São Paulo.
