@@ -3,13 +3,13 @@
 **Autor:** Arthur Santos  
 **Instituição:** Departamento de Ciência da Computação (DCOMP) — Universidade Federal de São João del-Rei (UFSJ)
 
-## 📌 Sobre o Projeto
+## Sobre o Projeto
 
 Este repositório contém a implementação modular e os experimentos da pesquisa voltada à investigação e otimização estrutural do algoritmo de agrupamento não supervisionado **VillageNet** (Ballal et al., 2026).
 
 O objetivo central é avaliar se alterações nos módulos internos do algoritmo (Etapas 1, 3 e 4) conseguem superar a precisão, a estabilidade e o tempo de execução da formulação padrão em bases públicas de *benchmark* e em dados clínicos reais de pacientes com Infarto Agudo do Miocárdio (IAM).
 
-## 🧪 Variações Algorítmicas Investigadas
+## Variações Algorítmicas Investigadas
 
 * **Etapa 1 (Criação das Vilas / Células de Voronoi):**
   * `kmeans_random` (Padrão do artigo: 1 inicialização aleatória)
@@ -25,13 +25,13 @@ O objetivo central é avaliar se alterações nos módulos internos do algoritmo
   * `infomap`
   * `louvain_igraph`
 
-## 📂 Estrutura Principal
+## Estrutura Principal
 
 * `src/experimentos_villagenet.ipynb`: Notebook principal contendo a classe `ModularVillageNet` e a bateria de experimentos nos *datasets* públicos (*Wine*, *Breast Cancer* e *Pen Digits*).
 * `DIARIO_DE_BORDO.md`: Registro semanal do progresso, resultados preliminares e próximos passos.
 * `requirements.txt`: Lista de dependências do projeto.
 
-## 🚀 Como Executar Localmente
+## Como Executar Localmente
 
 1. Crie e ative um ambiente virtual Python:
    ```bash
@@ -44,7 +44,7 @@ O objetivo central é avaliar se alterações nos módulos internos do algoritmo
    ```
 3. Abra e execute o notebook `experimentos_villagenet.ipynb` no VS Code ou Jupyter Lab.
 
-## 📚 Principais Referências
+## Principais Referências
 
 1. **BALLAL, A. et al.** VillageNet: Graph-based, Easily-interpretable, Unsupervised Clustering for Broad Biomedical Applications. *arXiv preprint arXiv:2501.10471v2*, 2026.
 2. **TRAAG, V. A.; WALTMAN, L.; VAN ECK, N. J.** From Louvain to Leiden: guaranteeing well-connected communities. *Scientific Reports*, v. 9, n. 5233, 2019.
