@@ -3,9 +3,9 @@
 
 ---
 
-## Semana 1 — 13 de Novembro de 2026
+## Semana 1 — 7 de Novembro de 2026
 
-### 1. O que foi feito nesta semana (Entregas)
+### 1. O que foi feito nesta semana
 * **Definição do Escopo e Documentação Inicial:** Elaboração dos slides de apresentação (5 minutos) e do documento formal da proposta de pesquisa em LaTeX, definindo os gargalos das Etapas 1, 3 e 4 do algoritmo VillageNet original (Ballal et al., 2026).
 * **Configuração do Ambiente e Repositório:** Criação do repositório no GitHub e configuração do ambiente local em Python (`venv`) integrado ao VS Code (`experimentos_villagenet.ipynb`).
 * **Implementação da Classe `ModularVillageNet`:** Desenvolvimento completo das 5 etapas do VillageNet de forma modular e desacoplada:
@@ -26,7 +26,6 @@
 | **Breast Cancer** ($m^*=2$) | `KMeans++ + Contínuo + Leiden` | $0.5300$ | $0.5313$ | $0.5400$ | **$0.6447$** | $3$ ($2$) | $0.0954\text{s}$ |
 | **Pen Digits** ($m^*=10$) | `KMeans-Random + Discreto + Infomap` | $0.8300$ | **$0.8450$** | $0.7300$ | **$0.8099$** | $12$ ($10$) | $0.1248\text{s}$ |
 
-**Destaques para discussão na reunião:**
 1. **Superioridade do Infomap na Etapa 4 (Experimento 1):** O algoritmo *Infomap* (que assim como o WLCF utiliza *Random Walks*, mas otimiza a compressão de fluxo de informação) superou as métricas reportadas no artigo original nas três bases testadas, com destaque para a base médica *Breast Cancer* (salto de $\text{ARI}$ de $0.54$ para $0.6971$).
 2. **Impacto da Ponderação Contínua e K-Means++ (Experimento 2):** Na base *Breast Cancer*, substituir a inicialização aleatória única por `K-Means++` e aplicar o peso contínuo na fronteira (`continuous`) fez o $\text{ARI}$ do detector *Leiden* saltar de $0.3296$ para $0.6447$, confirmando a hipótese de que a contagem discreta simples na fronteira sofre com ruído.
 3. **Acerto exato de $k$ pelo Spectral Clustering:** O *Spectral Clustering* combinado à heurística do *eigengap* foi o único método capaz de descobrir o número exato de classes ($m=2$, erro zero) na base *Breast Cancer*.
